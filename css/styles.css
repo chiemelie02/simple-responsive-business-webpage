@@ -774,3 +774,81 @@ header nav ul li a {
   background-color: #bbbaba;
   color: #262626;
 }
+.section-7 {
+  width: 100%;
+  height: 110vh;
+  padding-inline: 6rem;
+  padding-block: 3rem;
+  background-color: #dddddf;
+}
+.section-7 .sectiondiv-7 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+.section-7 .sectiondiv-7 .textarea-7 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+.section-7 .sectiondiv-7 .textarea-7 h1 {
+  font-size: 3.2rem;
+}
+.section-7 .sectiondiv-7 .textarea-7 p {
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: #424242;
+}
+.section-7 .sectiondiv-7 .pulldown {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section-7 .sectiondiv-7 .pulldown div {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1.5rem;
+}
+.section-7 .sectiondiv-7 .pulldown div p {
+  font-size: 1.05rem;
+  color: #424242;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+.section-7 .sectiondiv-7 .pulldown div p:hover {
+  color: #2f2fc0;
+}
