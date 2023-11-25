@@ -18,7 +18,7 @@ header{
     position: relative;
     .logo{
         font-size: 2rem;
-        color: @textcolor;
+        color: #262626;
     }
     .hamburger{
         // background-color: red;
@@ -70,39 +70,48 @@ header{
 
 .section-1{
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     padding-inline: @inline;
     background-color: #dddddf;
     .sectiondiv-1{
         width: 100%;
         height: 100%;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        border: none;
-        outline: none;
+        // display: grid;
+        // grid-template-columns: repeat(2,1fr);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         .imgwrap-1{
             height: 450px;
             width: 450px;
-            place-self: center;
-            // border-radius: 50%;
-
+            // place-self: center;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 50%;
+                // border-radius: 50%;
+            }
+            div{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                top: 0;
             }
         }
         .textarea-1{
             padding: 4rem;
-            width: 100%;
+            width: 600px;
             height: 100%;
             display: flex;
             flex-direction: column;
             gap: 2rem;
             // justify-content: space-between;
             align-items: flex-start;
-            background-color: #dddddf;
+            // background-color: #dddddf;
             color: @textcolor;
             h2{
                 text-transform: uppercase;
@@ -114,10 +123,13 @@ header{
                 text-transform: uppercase;
                 font-size: 4rem;
                 letter-spacing: 2.5px;
+                color: #262626;
             }
             p{
-                line-height: 2;
+                line-height: 1.5;
                 letter-spacing: 1px;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
             }
             .custombutton{
                 background-color: @customcolor;
@@ -762,6 +774,26 @@ header{
                     background-color: #bbbaba;
                     color: #262626;
                 }
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 35vh;
+    background-color: #dddddf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            color: @textcolor;
+            a{
+                color: @textcolor;
             }
         }
     }
