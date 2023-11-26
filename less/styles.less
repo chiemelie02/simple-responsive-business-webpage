@@ -16,9 +16,18 @@ header{
     padding-inline: @inline;
     background-color: #f7f7f7;
     position: relative;
+    @media @ipad{
+        height: 70px;
+        padding-inline: 3rem;
+    }
+    @media @mobile{}
     .logo{
         font-size: 2rem;
         color: #262626;
+        @media @ipad{
+            font-size: 1.8rem;
+        }
+        @media @mobile{}
     }
     .hamburger{
         // background-color: red;
@@ -31,9 +40,17 @@ header{
         justify-content: center;
         align-items: center;
         z-index: 2;
+        @media @ipad{
+            right: 3rem;
+        }
+        @media @mobile{}
         .ri-menu-line{
             font-size: 2.5rem;
             cursor: pointer;
+            @media @ipad{
+                font-size: 2rem;
+            }
+            @media @mobile{}
             }
     }
     nav{
@@ -73,26 +90,51 @@ header{
     height: 85vh;
     padding-inline: @inline;
     background-color: #dddddf;
+
+    // Media query
+    @media @ipad{
+        padding-inline: 3rem;
+        padding-block: 2rem;
+        height: 80vh;
+    }
+    @media @mobile{}
+
+
     .sectiondiv-1{
         width: 100%;
         height: 100%;
-        // display: grid;
-        // grid-template-columns: repeat(2,1fr);
         display: flex;
         align-items: center;
         justify-content: space-around;
+
+        // Media query
+        @media @ipad{
+            flex-direction: column;
+            gap: 3rem;
+        }
+        @media @mobile{}
+
+
         .imgwrap-1{
             height: 450px;
             width: 450px;
-            // place-self: center;
             border-radius: 50%;
             position: relative;
             overflow: hidden;
+
+            // Media query
+            @media @ipad{
+                border-radius: 0;
+                width: 100%;
+                height: 900px;
+            }
+            @media @mobile{}
+
+
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                // border-radius: 50%;
             }
             div{
                 width: 100%;
@@ -109,21 +151,44 @@ header{
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            // justify-content: space-between;
             align-items: flex-start;
-            // background-color: #dddddf;
             color: @textcolor;
+
+            // Media query
+            @media @ipad{
+                width: 100%;
+                padding: 0;
+                gap: 1rem;
+            }
+            @media @mobile{}
+
+
             h2{
                 text-transform: uppercase;
                 font-size: 1.7rem;
                 font-weight: 100;
                 letter-spacing: 1.5px;
+
+                // Media query
+                @media @ipad{
+                    font-size: 1.4rem;
+                    letter-spacing: 1px;
+                }
+                @media @mobile{}
             }
             h1{
                 text-transform: uppercase;
                 font-size: 4rem;
                 letter-spacing: 2.5px;
                 color: #262626;
+
+                // Media query
+                @media @ipad{
+                    font-size: 3.5rem;
+                    letter-spacing: 2px;
+                    width: 200px;
+                }
+                @media @mobile{}
             }
             p{
                 line-height: 1.5;
@@ -135,12 +200,12 @@ header{
                 background-color: @customcolor;
                 color: white;
                 font-size: 1.1rem;
-                padding: 10px 40px;
+                padding: 12px 40px;
                 outline: none;
                 border: none;
                 cursor: pointer;
                 transition: 1s;
-                border-radius: 5px;
+                // border-radius: 5px;
                 &:hover{
                     background-color: #bbbaba;
                     color: #262626;
@@ -152,15 +217,31 @@ header{
 
 .section-2{
     width: 100%;
-    height: 140vh;
+    height: 128vh;
     padding-inline: @inline;
     padding-block: 2.5rem;
     background-color: #262626;
+
+    // Media query
+    @media @ipad{
+        padding-inline: 3rem;
+    }
+    @media @mobile{}
+
     .sectiondiv-2{
         width: 100%;
         height: 100%;
         display: flex;
-        gap: 2rem;
+        justify-content: space-between;
+
+        // Media query
+        @media @ipad{
+            flex-direction: column;
+            justify-content: safe;
+            gap: 3rem;
+        }
+        @media @mobile{}
+
         .textarea-2{
             align-self: center;
             display: flex;
@@ -168,16 +249,23 @@ header{
             gap: 1rem;
             align-items: flex-start;
             padding-right: 1rem;
-            // width: 300px;
-            // background-color: aquamarine;
+            width: 40%;
+
+            // Media query
+        @media @ipad{
+            width: 100%;
+            padding-right: 0;
+        }
+        @media @mobile{}
             h2{
                 text-transform: uppercase;
                 font-size: 1.5rem;
                 letter-spacing: 1px;
                 color: white;
+                font-weight: 100;
             }
             h1{
-                font-size: 2.3rem;
+                font-size: 3rem;
                 color: white;
                 margin-bottom: 1.5rem;
                 font-weight: 100;
@@ -186,7 +274,7 @@ header{
             p{
                 color: white;
                 font-size: 1rem;
-                letter-spacing: 0.7px;
+                letter-spacing: 0.4px;
                 line-height: 2;
             }
             button{
@@ -207,54 +295,78 @@ header{
                 }
             }
         }
-        .boxsection-1{
-            align-self: last baseline;
-            height: 86%;
-            width: 1200px;
-            // background-color: aquamarine;
+        .boxsection{
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
-            // gap: 2rem;
-            .boxes{
-                background-color: white;
-                color: @textcolor;
-                padding: 1.2rem;
-                padding-top: 2rem;
+            height: 100%;
+            width: 57%;
+            padding-inline: 1rem;
+
+            // Media query
+        @media @ipad{
+            width: 100%;
+        }
+        @media @mobile{}
+
+            .boxsection-1{
+                align-self: last baseline;
+                height: 88%;
+                width: 300px;
+                // background-color: aquamarine;
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 1.5rem;
-                height: 320px;
                 // justify-content: space-between;
-                div{
-                    height: 70px;
-                    width: 70px;
-                    border-radius: 50%;
-                    background-color: @customcolor;
-                    display: grid;
-                    place-items: center;
-                    i{
-                        font-size: 2rem;
-                        color: white
+                gap: 2rem;
+
+                // Media query
+                @media @ipad{
+                    width: 330px;
+                }
+                @media @mobile{}
+
+                .boxes{
+                    background-color: white;
+                    color: @textcolor;
+                    padding: 1.2rem;
+                    padding-top: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1.5rem;
+                    height: 350px;
+                    // justify-content: space-between;
+                    div{
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 50%;
+                        background-color: @customcolor;
+                        display: grid;
+                        place-items: center;
+                        i{
+                            font-size: 2rem;
+                            color: white
+                        }
+                    }
+                    h3{
+                        font-size: 1.5rem;
+                        font-weight: 100;
+                        // letter-spacing: 0.7px;
+                        color: #262626;
+                    }
+                    p{
+                        line-height: 1.5;
+                        font-size: 0.95rem;
+                        font-style: italic;
+                        color: @textcolor;
+                        letter-spacing: 0.4px
                     }
                 }
-                h3{
-                    font-size: 1.3rem;
-                    font-weight: 100;
-                    // letter-spacing: 0.7px;
-                    color: #262626
-                }
-                p{
-                    line-height: 1.5;
-                    font-size: 0.9rem;
-                }
+    
             }
-
-        }
-        .boxsection-2{
-            .boxsection-1();
-            align-self: first baseline;
+            .boxsection-2{
+                .boxsection-1();
+                align-self: first baseline;
+            }
         }
     }
 }
@@ -264,22 +376,43 @@ header{
     height: 180vh;
     padding-inline: @inline;
     padding-block: 3rem;
+
+    // Media query
+    @media @ipad{
+        padding-inline: 3rem;
+        height: 135vh;
+    }
+    @media @mobile{}
+    
     .sectiondiv-3{
         width: 100%;
         height: 100%;
-        // background-color: #262626;
         color: @textcolor;
         display: grid;
         grid-template-columns: repeat(1,1fr);
         place-items: center;
         gap: 4rem;
+
+        // Media query
+        @media @ipad{
+            gap: 2rem;
+        }
+        @media @mobile{}
+        
         .textarea-3{
             display: flex;
             flex-direction: column;
             gap: 3rem;
             text-align: center;
-            // background-color: aquamarine;
             width: 600px;
+
+            // Media query
+            @media @ipad{
+                width: 100%;
+                gap: 1rem;
+            }
+            @media @mobile{}
+            
             h1{
                 font-size: 3.5rem;
                 font-weight: 300;
@@ -296,11 +429,24 @@ header{
             grid-template-columns: repeat(3,1fr);
             gap: 2rem;
             width: 100%;
+
+            // Media query
+            @media @ipad{
+                grid-template-columns: repeat(2,1fr);
+            }
+            @media @mobile{}
+            
             .imgwrap{
                 width: 362px;
                 height: 350px;
-                // overflow: hidden;
                 position: relative;
+
+                // Media query
+                @media @ipad{
+                    width: 360px;
+                }
+                @media @mobile{}
+                
                 img{
                     width: 100%;
                     height: 100%;
@@ -340,6 +486,14 @@ header{
     padding-inline: @inline;
     padding-block: 2rem;
     background-color: #dddddf;
+
+    // Media query
+    @media @ipad{
+        padding-inline: 3rem;
+        height: 50vh;
+    }
+    @media @mobile{}
+    
     .sectiondiv-4{
         width: 100%;
         height: 100%;
@@ -347,6 +501,13 @@ header{
         justify-content: center;
         align-items: center;
         gap: 5rem;
+
+        // Media query
+        @media @ipad{
+            gap: 3rem;
+        }
+        @media @mobile{}
+        
         .textarea-4{
             // background-color: #c0bebe;
             height: 100%;
@@ -362,6 +523,13 @@ header{
                 font-weight: 300;
                 line-height: 1.5;
                 color: #262626;
+
+                // Media query
+                @media @ipad{
+                    line-height: 1.3;
+                }
+                @media @mobile{}
+                
             }
             p{
                 font-size: 0.9rem;
@@ -413,6 +581,14 @@ header{
     height: 100vh;
     padding-inline: @inline;
     padding-block: 2rem;
+
+    // Media query
+    @media @ipad{
+        padding-inline: 3rem;
+        height: 60vh;
+    }
+    @media @mobile{}
+    
     .sectiondiv-5{
         width: 100%;
         height: 100%;
@@ -420,19 +596,40 @@ header{
         flex-direction: column;
         align-items: center;
         gap: 5rem;
+
+        // Media query
+        @media @ipad{
+            gap: 2rem;
+        }
+        @media @mobile{}
+        
         .textarea-5{
             h1{
                 font-size: 3.7rem;
                 letter-spacing: 1.5px;
                 color: #262626;
                 font-weight: 300;
+
+                // Media query
+                @media @ipad{
+                    font-size: 3rem;
+                    width: 100%;
+                }
+                @media @mobile{}
+                
             }
         }
         .stacks{
             width: 100%;
             height: 80vh;
             position: relative;
-            // background-color: aquamarine;
+
+            // Media query
+            @media @ipad{
+                height: 100%;
+            }
+            @media @mobile{}
+            
             .stack-1{
                 background-color: #262626;
                 color: white;
@@ -444,6 +641,13 @@ header{
                 position: absolute;
                 top: 0;
                 right: 0;
+
+                // Media query
+                @media @ipad{
+                    width: 100%;
+                }
+                @media @mobile{}
+                
                 div{
                     width: 50%;
                     height: 100%;
@@ -482,6 +686,14 @@ header{
                 position: absolute;
                 left: 7%;
                 bottom: 20%;
+
+                // Media query
+                @media @ipad{
+                    left: 18%;
+                    bottom: 15%;
+                }
+                @media @mobile{}
+                
                 img{
                     width: 100%;
                     height: 100%;
@@ -494,6 +706,13 @@ header{
                 position: absolute;
                 top: -1.5rem;
                 left: 40%;
+
+                // Media query
+                @media @ipad{
+                    left: 30%;
+                }
+                @media @mobile{}
+                
                 img{
                     width: 100%;
                     height: 100%;
@@ -511,6 +730,13 @@ header{
     background-color: #262626;
     padding-inline: @inline;
     padding-block: 3rem;
+
+    // Media query
+    @media @ipad{
+        padding-inline: 3rem;
+    }
+    @media @mobile{}
+    
     .sectiondiv-6{
         width: 100%;
         height: 100%;
@@ -534,6 +760,7 @@ header{
                 font-style: italic;
                 font-size: 1rem;
                 letter-spacing: 0.5px;
+                line-height: 2;
             }
         }
         .hero{
@@ -544,8 +771,16 @@ header{
                 display: flex;
                 // grid-template-columns: repeat(3,1fr);
                 justify-content: space-between;
-                
                 // gap: 2rem;
+
+                // Media query
+                @media @ipad{
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                    gap: 2rem;
+                }
+                @media @mobile{}
+                
                 .imgwrap-2{
                     width: 350px;
                     height: 400px;
@@ -626,6 +861,14 @@ header{
     padding-inline: @inline;
     padding-block: 3rem;
     background-color: #dddddf;
+
+    // Media query
+    @media @ipad{
+        height: 70vh;
+        padding-inline: 3rem;
+    }
+    @media @mobile{}
+    
     .sectiondiv-7{
         width: 100%;
         height: 100%;
@@ -683,6 +926,14 @@ header{
     background-color: #262626;
     padding-inline: @inline;
     padding-block: 4rem;
+
+    // Media query
+    @media @ipad{
+        padding-inline: 3rem;
+        padding-block: 2rem;
+    }
+    @media @mobile{}
+    
     .sectiondiv-8{
         width: 100%;
         height: 100%;
@@ -690,6 +941,13 @@ header{
         grid-template-columns: repeat(3,1fr);
         place-items: center;
         gap: 2rem;
+
+        // Media query
+        @media @ipad{
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media @mobile{}
+        
         .textarea-8{
             display: flex;
             flex-direction: column;
@@ -744,6 +1002,13 @@ header{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            // Media query
+            @media @ipad{
+                place-self: center;
+            }
+            @media @mobile{}
+            
             input{
                 padding: 0.8rem;
                 font-size: 0.95rem;
@@ -785,6 +1050,13 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    // Media query
+    @media @ipad{
+        height: 20vh;
+    }
+    @media @mobile{}
+    
     div{
         width: 100%;
         display: flex;
